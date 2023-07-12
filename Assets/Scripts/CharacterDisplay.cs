@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterDisplay : MonoBehaviour
 {
-    public Image characterImage; // The image component that displays the character's PNG
+    public Image characterImage;
+    public TextMeshProUGUI characterName;
 
-    // This method should be called when the selected character changes
-    public void UpdateDisplay(Sprite characterSprite)
+    public void UpdateDisplay(Character character)
     {
-        // Update the character image
-        characterImage.sprite = characterSprite;
+        characterImage.sprite = character.characterFace;
+        characterName.text = character.characterName;
     }
 }
+

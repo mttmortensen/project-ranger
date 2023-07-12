@@ -5,12 +5,21 @@ using UnityEngine.UI;
 
 public class CharacterButton : MonoBehaviour
 {
-    public Image characterImage; // The image component that displays the character's PNG
+    public Image characterImage;
+    private Character character;
+    private CharacterSelectManager characterSelectManager;
 
-    // This method should be called when the button is clicked
+    public void Setup(Character character, CharacterSelectManager manager)
+    {
+        this.character = character;
+        this.characterSelectManager = manager;
+        characterImage.sprite = character.characterFace;
+        GetComponent<Button>().onClick.AddListener(OnClick);
+    }
+
     public void OnClick()
     {
-        // Notify the character select manager that this character has been selected
-        CharacterSelectManager.instance.SelectCharacter(characterImage.sprite);
+        characterSelectManager.UpdateDisplay(character);
     }
 }
+

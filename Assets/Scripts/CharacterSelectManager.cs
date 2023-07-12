@@ -1,55 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using UnityEngine.UI;
 
 public class CharacterSelectManager : MonoBehaviour
 {
-    public static CharacterSelectManager instance; // Singleton instance
-    public GameObject buttonPrefab;
-    public Transform buttonContainer;
+    public Character[] characters;
+    public GameObject characterButtonPrefab;
+    public Transform characterButtonContainer;
+    public CharacterDisplay characterDisplay;
 
-    public Image selectedCharacterImage; // The image component that displays the selected character
-    
-    public List<Character> characterList;
+    private Character selectedCharacter;
 
-    private void Awake()
+    void Start()
     {
-        // Set up the singleton instance
-        if (instance == null)
+        for (int i = 0; i < characters.Length; i++)
         {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
+            CharacterButton characterButton = Instantiate(characterButtonPrefab, characterButtonContainer).GetComponent<CharacterButton>();
+            characterButton.Setup(characters[i], this);
         }
     }
 
-    private void Start()
+    public void UpdateDisplay(Character character)
     {
-        foreach (Character character in characterList)
-        {
-            // Instantiate a new button
-            GameObject buttonObj = Instantiate(buttonPrefab, buttonContainer);
-
-            // Get the CharacterButton component of the new button
-            CharacterButton button = buttonObj.GetComponent<CharacterButton>();
-
-            // Set the character image of the button
-            button.characterImage.sprite = character.characterFace;
-
-            // Set the onClick event of the button
-            button.button.onClick.AddListener(() => characterDisplay.SelectCharacter(character.characterFace));
-        }
+        selectedCharacter = character;
+        characterDisplay.UpdateDisplay(character);
     }
 
-    // This method is called by the character buttons when they are clicked
-    public void SelectCharacter(Sprite characterSprite)
+    public void SelectCharacter()
     {
-        // Update the selected character display
-        selectedCharacterImage.sprite = characterSprite;
+        // Do something with selectedCharacter
     }
 }
 
