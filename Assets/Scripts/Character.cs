@@ -7,4 +7,5 @@ public class Character
 {
     public string characterName;
     public Sprite characterFace;
+    public Sprite characterFullBody;
 }

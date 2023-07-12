@@ -469,20 +469,28 @@ MonoBehaviour:
   characters:
   - characterName: Elf 1
     characterFace: {fileID: 21300000, guid: 5f6502a375222794da1c0642d2aad0ed, type: 3}
+    characterFullBody: {fileID: 21300000, guid: ccd2476f311535044ae658b935b23dc3, type: 3}
   - characterName: Ellf 2
     characterFace: {fileID: 21300000, guid: 56f11b0c2fefc32438d541ead5ff871c, type: 3}
+    characterFullBody: {fileID: 21300000, guid: 4f7085214ae7c814592799fb3f4d129e, type: 3}
   - characterName: Elf 3
     characterFace: {fileID: 21300000, guid: cf7cc641e121d684fb428bc899187b00, type: 3}
+    characterFullBody: {fileID: 21300000, guid: 3a76d36e7c5be564481b93c7b5a7a6fa, type: 3}
   - characterName: Elf 4
     characterFace: {fileID: 21300000, guid: c88bea0f07c4ee84f90558da902d2125, type: 3}
+    characterFullBody: {fileID: 21300000, guid: 8e7c26948614df147a950710c5d5f1f3, type: 3}
   - characterName: Elf 5
     characterFace: {fileID: 21300000, guid: 0f96c9032e65b224ea080d56ca606868, type: 3}
+    characterFullBody: {fileID: 21300000, guid: 948e7662ea7db574da3c793448a6a402, type: 3}
   - characterName: Elf 6
     characterFace: {fileID: 21300000, guid: f0778f826ed266946a81be1d474c75e0, type: 3}
+    characterFullBody: {fileID: 21300000, guid: 8b14ab5d341761c42be61d0fb75e83ef, type: 3}
   - characterName: Elf 7
     characterFace: {fileID: 21300000, guid: e39e6303ec508e04eb95cb539471a34b, type: 3}
+    characterFullBody: {fileID: 21300000, guid: ef708211897b67e4bb2897603e61469c, type: 3}
   - characterName: Elf 8
     characterFace: {fileID: 21300000, guid: defcbf9232613914fbb59b99457053f6, type: 3}
+    characterFullBody: {fileID: 21300000, guid: 4a0ca0a68025d084e93c833d0f63aedc, type: 3}
   characterButtonPrefab: {fileID: 1035360340281676183, guid: c9c6f01d3e8a0a346a68d2e3c21209a9, type: 3}
   characterButtonContainer: {fileID: 369107448}
   characterDisplay: {fileID: 1319886703}

@@ -11,7 +11,7 @@ public class CharacterDisplay : MonoBehaviour
 
     public void UpdateDisplay(Character character)
     {
-        characterImage.sprite = character.characterFace;
+        characterImage.sprite = character.characterFullBody;
         characterName.text = character.characterName;
     }
 }
