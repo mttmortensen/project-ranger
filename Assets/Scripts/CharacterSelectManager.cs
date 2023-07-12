@@ -18,6 +18,12 @@ public class CharacterSelectManager : MonoBehaviour
             CharacterButton characterButton = Instantiate(characterButtonPrefab, characterButtonContainer).GetComponent<CharacterButton>();
             characterButton.Setup(characters[i], this);
         }
+
+        // Selects the first character at the start
+        if (characters.Length > 0)
+        {
+            UpdateDisplay(characters[0]);
+        }
     }
 
     public void UpdateDisplay(Character character)
